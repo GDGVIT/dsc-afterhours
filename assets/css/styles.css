@@ -1,0 +1,165 @@
+/*Colours*/
+:root {
+    --black: #171719;
+    --purple: #5731EF;
+}
+
+*, *::after, **::before {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -ms-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+/*Body*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font: 'Gilroy', sans-serif;
+    background-color: var(--black);
+    color: #fff;
+}
+
+/*Navbar*/
+.nav-super {
+    position: fixed;
+    background-color: var(--black);
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-link {
+    display: inline;
+}
+
+.nav-link a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    background-color: var(--purple);
+}
+
+.nav-logo {
+    height: 30px;
+}
+.mobile-bars{
+    display: none;
+}
+
+/*Home section*/
+.container {
+    padding: 15vh 10vw 5vh 10vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#animated-icon {
+    width: 40%;
+}
+
+#home-text {
+    width: 60%;
+}
+
+.desk-icon,
+.mobile-icon {
+    margin: 0;
+    max-width: 100%;
+}
+
+.home-desc {
+    margin: 1.5rem 0 2rem 0;
+}
+
+.mobile-icon {
+    display: none;
+}
+
+.home-icon {
+    margin-right: 2rem;
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 1084px) {
+    .home-icon {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-icon {
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+
+    .desk-icon {
+        display: none;
+    }
+
+    .mobile-icon, .mobile-bars {
+        display: block;
+    }
+
+    #animated-icon,
+    #home-text {
+        width: 100%;
+    }
+    .navbar {
+        display: block;
+    }
+    .nav-logo, .mobile-bars{
+        padding-top: rem;
+        height: 25px;
+    }
+    .nav-logo{
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        transform:translateX(-50%);
+    }
+    .nav-link{
+        display: block;
+        padding: 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-list{
+        width: 100%;
+        padding: 0;
+    }
+    .navbar{
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+
+/*Hide and show elements*/
+.hide {
+    display: none;
+}

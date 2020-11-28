@@ -26,16 +26,21 @@ body {
     background-color: var(--black);
     color: #fff;
 }
-h1{
+
+h1 {
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 0;
 }
-h2{
+
+h2 {
     font-family: 'Gilroy-Regular', sans-serif;
     font-size: 1.5rem;
 }
-p{
+h3{
+    font-size: 1.5rem;
+}
+p {
     line-height: 1.5rem;
     font-size: 1rem;
 }
@@ -46,7 +51,7 @@ p{
     position: fixed;
     background-color: var(--black);
     width: 100%;
- 
+
 }
 
 .navbar {
@@ -68,6 +73,7 @@ p{
     padding: 1rem 2rem;
     text-decoration: none;
     color: #fff;
+    font-size: 1.2rem;
 }
 
 .active {
@@ -75,7 +81,8 @@ p{
 }
 
 .nav-logo {
-    height: 30px;
+    height: 40px;
+    padding: 0.5rem 0;
 }
 
 .mobile-bars {
@@ -124,10 +131,12 @@ p{
 }
 
 /*About section*/
-.episodes, .about{
+.episodes,
+.about {
     margin: 0 5vw 5vh 5vw;
     box-shadow: 0px 9px 128px rgba(0, 0, 0, 0.38), 0px 3.75998px 53.4753px rgba(0, 0, 0, 0.273165), 0px 2.01027px 28.5905px rgba(0, 0, 0, 0.226521), 0px 1.12694px 16.0276px rgba(0, 0, 0, 0.19), 0px 0.598509px 8.51213px rgba(0, 0, 0, 0.153479), 0px 0.249053px 3.54209px rgba(0, 0, 0, 0.106835);
 }
+
 .about {
     margin: 0 5vw 5vh 5vw;
     display: flex;
@@ -145,50 +154,107 @@ p{
     width: 45%;
     align-self: center;
 }
+
 /*Episodes*/
-.card{
+.card {
     margin-top: 2rem;
     padding: 2rem;
     box-shadow: 0px 22px 222px rgba(0, 0, 0, 0.27), 0px 6.63236px 66.9265px rgba(0, 0, 0, 0.15421), 0px 2.75474px 27.7978px rgba(0, 0, 0, 0.116897), 0px 0.996336px 10.0539px rgba(0, 0, 0, 0.0845258);
 }
-.episodes{
+
+.episodes {
     padding: 5%;
 }
-.episodes>h1{
-    margin-top: 0;
-}
-.extend>h2, .extend>i{
-    display: inline;
-}
-.extend>i{
-    float: right;
-}
-.extend:hover, .extend-small:hover, .play:hover{
-    cursor: pointer;
-}
-.extend-small{
-    text-align: center;
-    display: none;
-}
-.card>p:nth-child(1){
+
+.episodes>h1 {
     margin-top: 0;
 }
 
-.play{
-    background-color: var(--purple);
-    display: inline-block;
-    padding:5px 1rem;
-    margin-right: 1rem;
-}
-.play-btn >p ,
-.play-time{
+.extend>h2,
+.extend>i {
     display: inline;
 }
-.play-btn>i{
+
+.extend>i {
+    float: right;
+}
+
+.extend:hover,
+.extend-small:hover,
+.play:hover {
+    cursor: pointer;
+}
+
+.extend-small {
+    text-align: center;
+    display: none;
+}
+
+.card>p:nth-child(1) {
+    margin-top: 0;
+}
+
+.play {
+    background-color: var(--purple);
+    display: inline-block;
+    padding: 5px 1rem;
+    margin-right: 1rem;
+}
+
+.play-btn>p,
+.play-time {
+    display: inline;
+}
+
+.play-btn>i {
     margin-right: 0.5rem;
 }
-.extend-small{
+
+.extend-small {
     margin-top: 1em;
+}
+
+/*Footer*/
+#footer {
+    background: #171719;
+    box-shadow: 0px -65px 266px rgba(0, 0, 0, 0.16), 0px -27.1554px 111.128px rgba(0, 0, 0, 0.115017), 0px -14.5186px 59.4146px rgba(0, 0, 0, 0.0953772), 0px -8.13901px 33.3073px rgba(0, 0, 0, 0.08), 0px -4.32257px 17.6893px rgba(0, 0, 0, 0.0646228), 0px -1.79872px 7.3609px rgba(0, 0, 0, 0.0449833);
+    display: flex;
+}
+.footer-one{
+    width: 30%;
+}
+.footer-one>img{
+    width: 320px;
+    max-width: 100%;
+}
+.footer-two{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    text-align: center;
+}
+.footer-one, .footer-two{
+    padding: 5%;
+}
+.socials>a, .f-about>a, .links>a{
+    text-decoration: none;
+    color: white;
+}
+
+.socials>a{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+}
+.socials>a>i{
+    margin-right: 5px;
+}
+.socials>a>p{
+    display: inline;
+    line-height: 1.5rem;
 }
 
 
@@ -199,7 +265,8 @@ p{
         margin-right: 1rem;
         height: 35px;
     }
-    p{
+
+    p {
         font-size: 0.9rem;
     }
 }
@@ -208,7 +275,8 @@ p{
     .home-icon {
         height: 30px;
     }
-    p{
+
+    p {
         font-size: 0.8rem;
     }
 }
@@ -275,26 +343,31 @@ p{
         max-width: 90%;
         padding: 0 5%;
     }
-    .about{
+
+    .about {
         display: block;
     }
+
     .group {
         width: 100%;
-       }
-    
+    }
+
     .about-text {
         width: 90%;
     }
-    .extend>i{
+
+    .extend>i {
         display: none;
     }
-    .extend-small{
+
+    .extend-small {
         display: block;
     }
-    .episodes{
-border-bottom: 5px solid var(--purple);
+
+    .episodes {
+        border-bottom: 5px solid var(--purple);
     }
-    
+
 }
 
 

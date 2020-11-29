@@ -349,7 +349,7 @@ p {
     }
 
     .navbar {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem 1rem 1rem;
     }
 
     .mic {
@@ -420,6 +420,9 @@ p {
     }
     .socials-text{
         display: inline-block;
+    }
+    .nav-super{
+        position: fixed !important;
     }
 }
 

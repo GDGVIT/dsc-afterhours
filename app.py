@@ -10,6 +10,7 @@ rss_url= 'https://anchor.fm/s/3c55a5f0/podcast/rss'
 titles=[]
 descs=[]
 links=[]
+dates=[]
 
 @app.route('/')
 def index():
@@ -26,7 +27,8 @@ def index():
 
         title=entry.title
         titles.append(title)
-
+        date=entry.published[5:16]
+        dates.append(date)
         #generating iframe src
 
         src=entry.links[0].href
@@ -38,7 +40,7 @@ def index():
         descs.append(desc)
     print(len(links))
     print(links[0])
-    return render_template('index.html',len=len(links),descs=descs,links=links,titles=titles)
+    return render_template('index.html',len=len(links),descs=descs,links=links,titles=titles,dates=dates)
 
 
 

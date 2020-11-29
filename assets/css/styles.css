@@ -98,6 +98,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .mic {
@@ -311,7 +312,7 @@ p {
 
     #animated-icon,
     #home-text {
-        width: 100%;
+        width: 90%;
     }
 
     #home-text {

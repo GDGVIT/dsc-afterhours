@@ -36,7 +36,7 @@ function cutText() {
             $(this).empty().html(`${newStr}`);
             /*Adding read more button*/
             /*Hiding the extra string*/
-            $(this).append(`<span class="dots">...</span><span class="hide line">${extraStr}...</span>`);
+            $(this).append(`<span class="dots">...</span><span class="hide line">${extraStr}</span>`);
         }
     })
    

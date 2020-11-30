@@ -22,27 +22,31 @@ def index():
 
 
     parser= feedparser.parse(rss_url)
-
+    cnt=0
     for entry in parser.entries:
+        if(cnt<1):
+            title=entry.title
+            titles.append(title)
+            date=entry.published[5:16]
+            dates.append(date)
+            #generating iframe src
 
-        title=entry.title
-        titles.append(title)
-        date=entry.published[5:16]
-        dates.append(date)
-        #generating iframe src
-
-        src=entry.links[0].href
-        indices = [0,25,len(src)]
-        parts = [src[i:j] for i,j in zip(indices, indices[1:]+[None])]
-        iframe_src=parts[0]+"/embed"+parts[1]
-        links.append(iframe_src)
-        desc=cleanhtml(entry.content[0].value)
-        descs.append(desc)
-    print(len(links))
-    print(links[0])
-    return render_template('index.html',len=len(links),descs=descs,links=links,titles=titles,dates=dates)
+            src=entry.links[0].href
+            indices = [0,25,len(src)]
+            parts = [src[i:j] for i,j in zip(indices, indices[1:]+[None])]
+            iframe_src=parts[0]+"/embed"+parts[1]
+            links.append(iframe_src)
+            desc=cleanhtml(entry.content[0].value)
+            descs.append(desc)
+        cnt+=cnt
+    linkss=set(links)  
+    linksss=list(linkss)
+    for i in descs:
+        print(i)
+        print()  
+    return render_template('index.html',len=len(linksss),descs=descs,links=links,titles=titles,dates=dates,cnt=cnt)
 
 
 
 if __name__=='__main__':
-    app.run(debug=True) 
+    app.run(debug=False) 

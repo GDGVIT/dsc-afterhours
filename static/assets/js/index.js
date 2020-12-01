@@ -22,7 +22,7 @@ function navClick() {
 function cutText() {
     $.each($('.extend-text'), function(){
         $(this).html(`${$(this).html()}`)
-        console.log(this)
+        
         let maxLength = 375;
         let str = $(this).html().trim();
         let length = $(this).html().length;
@@ -53,10 +53,10 @@ $('.mobile-bars').click(navClick)
 $(".nav-super").css({"position":"fixed","top":"0"}); 
 /*Change nav class */
 $('.click').click(function (e) {
-    console.log($('.click'))
+   
     $.each($('.click'), function(key, value){
         $(value).removeClass('active')
-        console.log($(value))
+       
     })
 
     $(e.target).addClass('active')
@@ -89,7 +89,7 @@ let sections=$('.section');
 $(window).scroll(function(){
     $.each($('.section'),function(key, val){
         if($(window).scrollTop() >  $(val).offset().top - 150){
-            console.log($(val))
+           
             $.each($('.click'), function(keys, value){
                 $(value).removeClass('active')
             })

@@ -129,9 +129,11 @@ p {
     display: none;
 }
 
+
 .home-icon {
     margin-right: 2rem;
 }
+
 
 /*About section*/
 .episodes,
@@ -424,6 +426,7 @@ p {
     .nav-super{
         position: fixed !important;
     }
+  
 }
 
 

@@ -52,12 +52,18 @@
                     journey in tech, learn new things, have fun and impart knowledge in the process.
                 </p>
                 <div class="home-icons">
-                    <img src="../static/assets/icons/Vectoricon1.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon2.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon3.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon4.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon5.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon6.svg" alt="social" class="home-icon">
+                    <a href="https://open.spotify.com/show/3N03C8MuIQPSqqGZp8XF56">
+                        <img src="../static/assets/icons/Vectoricon2.svg" alt="social" class="home-icon"></a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1536768786">
+                        <img src="../static/assets/icons/Vectoricon1.svg" alt="social" class="home-icon"></a>
+                    <a href="https://pca.st/m1y1rnmy">
+                        <img src="../static/assets/icons/Vectoricon3.svg" alt="social" class="home-icon"></a>
+                    <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zYzU1YTVmMC9wb2RjYXN0L3Jzcw==">
+                        <img src="../static/assets/icons/Vectoricon4.svg" alt="social" class="home-icon"></a>
+                    <a href="https://overcast.fm/itunes1536768786/dsc-afterhours">
+                        <img src="../static/assets/icons/Vectoricon6.svg" alt="social" class="home-icon"></a>
+                    <a href="https://radiopublic.com/dsc-afterhours-WoL3jR">
+                        <img src="../static/assets/icons/Vectoricon5.svg" alt="social" class="home-icon"></a>
                 </div>
 
             </div>
@@ -90,20 +96,20 @@
         <div class="episodes">
             <h1>Episodes</h1>
             {% for i in range(len-1,-1,-1) %}
-                    <div class="card">
-                        <p>{{dates[i]}}</p>
-                        <div class="extend">
-                            <h2>
-                                {{ titles[i] }}
-                            </h2>
-                            <i class="fas fa-chevron-down fa-2x chevron"></i>
-                        </div>
-                        <p class="extend-text">
-                            {{ descs[i] }}
+            <div class="card">
+                <p>{{dates[i]}}</p>
+                <div class="extend">
+                    <h2>
+                        {{ titles[i] }}
+                    </h2>
+                    <i class="fas fa-chevron-down fa-2x chevron"></i>
+                </div>
+                <p class="extend-text">
+                    {{ descs[i] }}
 
-                        </p>
-                        <iframe src={{links[i]}} height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
-                    </div>
+                </p>
+                <iframe src={{links[i]}} height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
             {% endfor %}
 
         </div>
@@ -143,7 +149,7 @@
                             Facebook
                         </p>
                     </a>
-    
+
 
                 </div>
             </span>
@@ -157,7 +163,7 @@
                 </a>
                 <a href="https://medium.com/gdg-vit">
                     <p>Medium</p>
-                </a>  
+                </a>
             </span>
             <span class="links">
                 <h2>Links</h2>

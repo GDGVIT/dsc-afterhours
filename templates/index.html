@@ -29,11 +29,11 @@
             <img src="../static/assets/icons/Vectorbars.svg" alt="menu" class="mobile-bars">
 
             <ul class="nav-list">
-                <li class="nav-link">
-                    <a href="#aboutus" class="active">About Us</a>
+                <li class="nav-link ">
+                    <a href="#aboutus" class="click aboutus">About Us</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#episodes">Episodes</a>
+                    <a href="#episodess" class="click episodess">Episodes</a>
                 </li>
                 <li class="nav-link">
                     <a href="https://anchor.fm/dsc-vit/episodes/Introducing-DSC-Afterhours-elalj4">Subscribe</a>
@@ -64,7 +64,7 @@
 
         </div>
     </section>
-    <section id="aboutus">
+    <section id="aboutus" class="section">
         <div class="about">
             <img src="../static/assets/img/group_dsc.png" alt="group" class="group">
             <div class="about-text">
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section id="episodes">
+    <section id="episodess" class="section">
         <div class="episodes">
             <h1>Episodes</h1>
             {% for i in range(len-1,-1,-1) %}

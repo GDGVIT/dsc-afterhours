@@ -22,13 +22,14 @@ def index():
 
 
     parser= feedparser.parse(rss_url)
-    cnt=0
+    
     for entry in parser.entries:
     
         title=entry.title
         titles.append(title)
         date=entry.published[5:16]
         dates.append(date)
+        
         #generating iframe src
 
         src=entry.links[0].href
@@ -41,8 +42,8 @@ def index():
     
     linkss=set(links)  
     linksss=list(linkss)
-    print(linksss)  
-    return render_template('index.html',len=len(linksss),descs=descs,links=links,titles=titles,dates=dates,cnt=cnt)
+    #print(linksss)  
+    return render_template('index.html',len=len(linksss),descs=descs,links=links,titles=titles,dates=dates)
 
 
 

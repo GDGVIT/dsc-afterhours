@@ -23,7 +23,7 @@ function cutText() {
         $(this).html(`${$(this).html()}`)
         console.log(this)
         let maxLength = 375;
-        let str = $(this).html();
+        let str = $(this).html().trim();
         let length = $(this).html().length;
         let newStr;
         let extraStr;

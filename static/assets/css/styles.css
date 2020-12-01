@@ -131,6 +131,10 @@ p {
 
 .home-icon {
     margin-right: 2rem;
+    color: #fff;
+}
+.home-icons{
+    display: flex;
 }
 
 /*About section*/
@@ -296,6 +300,10 @@ p {
 }
 
 @media (max-width: 768px) {
+    
+    .home-icons{
+        justify-content: center;
+    }
     .container {
         display: block;
         text-align: center;
@@ -317,6 +325,7 @@ p {
 
     #home-text {
         margin-top: 2rem;
+        padding: 0% 5%;
     }
 
     .navbar {
@@ -423,6 +432,11 @@ p {
     }
     .nav-super{
         position: fixed !important;
+    }
+}
+@media (max-width: 400px){
+    .home-icon{
+        margin-right: 0.5rem;
     }
 }
 

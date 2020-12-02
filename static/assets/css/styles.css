@@ -386,16 +386,18 @@ p {
 
     .navbar {
         display: block;
+        position: relative;
     }
 
     .nav-logo,
     .mobile-bars {
-        padding-top: rem;
+      
         height: 25px;
     }
 
     .nav-logo {
         position: absolute;
+        top: 0;
         z-index: 99;
         left: 50%;
         transform: translateX(-50%);

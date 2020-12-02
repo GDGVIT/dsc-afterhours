@@ -275,6 +275,62 @@ p {
   
 }
 
+/*Animation*/
+.circle-container{
+    
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 60px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    position: absolute;
+}
+.micro{
+    position: absolute;
+    height: 50px;
+    width: auto;
+}
+.circle:nth-child(1){
+    animation: 2.5s linear infinite circleAnimation ;
+}
+.circle:nth-child(2){
+    animation: 2.5s  linear -0.5s infinite circleAnimation ;
+}
+.circle:nth-child(3){
+    animation: 2.5s  linear -1s infinite circleAnimation ;
+}
+.circle:nth-child(3){
+    animation: 2.5s  linear -1.5s infinite circleAnimation ;
+}
+.circle:nth-child(4){
+    animation: 2.5s  linear -2s infinite circleAnimation ;
+}
+.circle:nth-child(5){
+    animation: 2.5s  linear -2.5s infinite circleAnimation ;
+}
+
+@keyframes circleAnimation{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        
+        transform: scale(5);
+        opacity: 0.1;
+    }
+}
+
 
 /*Media Queries*/
 
@@ -433,10 +489,31 @@ p {
     .nav-super{
         position: fixed !important;
     }
+    
 }
 @media (max-width: 400px){
     .home-icon{
         margin-right: 0.5rem;
+    }
+    .circle-container{
+        width: 200px;
+        height: 200px;
+    }
+    .circle{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 250px){
+
+    .circle-container{
+        width: 80vw;
+        height: 80vw;
+    }
+    .circle{
+        height: 25px;
+        width: 25px;
     }
 }
 

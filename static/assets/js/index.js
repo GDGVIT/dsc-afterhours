@@ -1,3 +1,4 @@
+
 function nav() {
 
 
@@ -21,7 +22,7 @@ function navClick() {
 function cutText() {
     $.each($('.extend-text'), function(){
         $(this).html(`${$(this).html()}`)
-        console.log(this)
+        
         let maxLength = 375;
         let str = $(this).html().trim();
         let length = $(this).html().length;
@@ -52,7 +53,12 @@ $('.mobile-bars').click(navClick)
 $(".nav-super").css({"position":"fixed","top":"0"}); 
 /*Change nav class */
 $('.click').click(function (e) {
-    $('.click').removeClass('active');
+   
+    $.each($('.click'), function(key, value){
+        $(value).removeClass('active')
+       
+    })
+
     $(e.target).addClass('active')
     if ($(window).width() <= 768) {
         $('.mobile-bars').click()
@@ -76,3 +82,25 @@ $('.chevron').click(function(e){
         $(e.target).addClass('fa-chevron-down')
     }
 })
+
+/*Scroll spy*/
+let sections=$('.section');
+
+$(window).scroll(function(){
+    $.each($('.section'),function(key, val){
+        if($(window).scrollTop() >  $(val).offset().top - 150){
+           
+            $.each($('.click'), function(keys, value){
+                $(value).removeClass('active')
+            })
+
+            let currentid=$(val).attr('id');
+            $(`.${currentid}`).addClass('active')
+
+            
+        }
+
+    })
+})
+
+

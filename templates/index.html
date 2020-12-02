@@ -21,19 +21,21 @@
 <body>
     <div class="nav-super">
         <nav class="navbar">
-            <span>
-                <a href="#home">
-                    <img src="../static/assets/img/DSCWhitedsc.svg" alt="dsc" class="nav-logo">
-                </a>
-            </span>
-            <img src="../static/assets/icons/Vectorbars.svg" alt="menu" class="mobile-bars">
+            <div class="mob-bars">
+                <span>
+                    <a href="#home">
+                        <img src="../static/assets/img/DSCWhitedsc.svg" alt="dsc" class="nav-logo">
+                    </a>
+                </span>
+                <img src="../static/assets/icons/Vectorbars.svg" alt="menu" class="mobile-bars">    
+            </div>
 
             <ul class="nav-list">
-                <li class="nav-link">
-                    <a href="#aboutus" class="active">About Us</a>
+                <li class="nav-link ">
+                    <a href="#aboutus" class="click aboutus">About Us</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#episodes">Episodes</a>
+                    <a href="#episodess" class="click episodess">Episodes</a>
                 </li>
                 <li class="nav-link">
                     <a href="https://anchor.fm/dsc-vit/episodes/Introducing-DSC-Afterhours-elalj4">Subscribe</a>
@@ -43,8 +45,15 @@
     </div>
     <section id="home">
         <div class="container">
-            <img src="../static/assets/img/illustrationmic.svg" alt="mic" class="mic">
-            <div id="home-text">
+            <div class="circle-container">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <img src="../static/assets/img/Groupmic.svg" alt="dsc" class="micro">
+    
+            </div>            <div id="home-text">
                 <img src="../static/assets/img/Vectorlogo_large.svg" alt="afterhours" class="desk-icon">
                 <img src="../static/assets/img/Vectorlogo_small.svg" alt="afterhours" class="mobile-icon">
                 <p class="home-desc">
@@ -52,19 +61,24 @@
                     journey in tech, learn new things, have fun and impart knowledge in the process.
                 </p>
                 <div class="home-icons">
-                    <img src="../static/assets/icons/Vectoricon1.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon2.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon3.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon4.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon5.svg" alt="social" class="home-icon">
-                    <img src="../static/assets/icons/Vectoricon6.svg" alt="social" class="home-icon">
-                </div>
+                    <a href="https://open.spotify.com/show/3N03C8MuIQPSqqGZp8XF56">
+                        <img src="../static/assets/icons/Vectoricon2.svg" alt="social" class="home-icon"></a>
+                    <a href="https://podcasts.apple.com/us/podcast/id1536768786">
+                        <img src="../static/assets/icons/Vectoricon1.svg" alt="social" class="home-icon"></a>
+                    <a href="https://pca.st/m1y1rnmy">
+                        <img src="../static/assets/icons/Vectoricon3.svg" alt="social" class="home-icon"></a>
+                    <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zYzU1YTVmMC9wb2RjYXN0L3Jzcw==">
+                        <img src="../static/assets/icons/Vectoricon4.svg" alt="social" class="home-icon"></a>
+                    <a href="https://overcast.fm/itunes1536768786/dsc-afterhours">
+                        <img src="../static/assets/icons/Vectoricon6.svg" alt="social" class="home-icon"></a>
+                    <a href="https://radiopublic.com/dsc-afterhours-WoL3jR">
+                        <img src="../static/assets/icons/Vectoricon5.svg" alt="social" class="home-icon"></a>                </div>
 
             </div>
 
         </div>
     </section>
-    <section id="aboutus">
+    <section id="aboutus" class="section">
         <div class="about">
             <img src="../static/assets/img/group_dsc.png" alt="group" class="group">
             <div class="about-text">
@@ -86,7 +100,7 @@
         </div>
     </section>
 
-    <section id="episodes">
+    <section id="episodess" class="section">
         <div class="episodes">
             <h1>Episodes</h1>
             {% for i in range(len-1,-1,-1) %}
@@ -182,6 +196,7 @@
             </span>
         </div>
     </section>
+   
 
 
     <!--Scripts-->

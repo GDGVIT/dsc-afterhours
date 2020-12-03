@@ -26,6 +26,30 @@ body {
     background-color: var(--black);
     color: #fff;
 }
+/*Scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--black);
+
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    background-image: url('https://raw.githubusercontent.com/gkdhindsa/dsc-afterhours/master/static/assets/img/Groupmic.svg');
+    background-size:13px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(87,49,239, 0.5);
+  }
 
 h1 {
     font-family: 'Gilroy-Bold', sans-serif;

@@ -379,13 +379,18 @@ p {
     .home-icon {
         height: 30px;
     }
-
     p {
         font-size: 0.8rem;
     }
 }
 
 @media (max-width: 768px) {
+    h1{
+        font-weight: 700;
+    }
+    .home-icons{
+        justify-content: center;
+    }
     .container {
         display: block;
         text-align: center;
@@ -412,7 +417,6 @@ p {
 
     .navbar {
         display: block;
-        position: relative;
     }
 
     .nav-logo,

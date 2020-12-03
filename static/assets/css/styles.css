@@ -381,7 +381,8 @@ p {
 
 @media (max-width: 768px) {
     h1{
-        font-weight: 700;
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 2.2rem;
     }
     .home-icons{
         justify-content: center;

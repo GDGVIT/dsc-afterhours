@@ -102,6 +102,11 @@ p {
     align-items: center;
 
 }
+#animated-icon{
+    width: 500px;
+    height: 500px;
+    padding-right: 2rem;
+}
 
 .mic {
     width: 30%;

@@ -104,3 +104,24 @@ $(window).scroll(function(){
 })
 
 
+
+$(document).ready(function () {
+    /*Page loader */
+    $('#loader').addClass('hide')
+
+
+    /*Anchor iframe loaded*/
+
+    $.each($('iframe'), function (key, val) {
+        console.log(val)
+        $(val).on('load', function () {
+            console.log($(val))
+            $(val).parent().children('.block').addClass('hide')
+         
+        })
+    })
+
+})
+
+
+

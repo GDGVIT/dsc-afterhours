@@ -319,7 +319,20 @@ p {
 
 }
 
-/*Animation*/
+/*Animation loader*/
+
+#loader{
+    position: fixed;
+    z-index: 100;
+}
+.loader-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .circle-container {
 
     height: 400px;
@@ -409,6 +422,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    .micro{
+        height: 30px;
+    }
     h1{
         font-family: 'Gilroy-Medium', sans-serif;
         font-size: 2.2rem;

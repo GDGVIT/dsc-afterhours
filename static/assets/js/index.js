@@ -107,7 +107,7 @@ $(window).scroll(function(){
 
 $(document).ready(function () {
     /*Page loader */
-
+    $('#loader').addClass('hide')
 
 
     /*Anchor iframe loaded*/

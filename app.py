@@ -1,6 +1,8 @@
 from flask import Flask,render_template,redirect,request,url_for
 import re
 import feedparser
+import lxml.html
+import lxml.html.clean
 #from parser import *
 
 app=Flask(__name__)
@@ -12,13 +14,16 @@ descs=[]
 links=[]
 dates=[]
 
+
 @app.route('/')
 def index():
 
-    def cleanhtml(raw_html):
-        cleanr = re.compile('<.*?>')
-        cleantext = re.sub(cleanr, '', raw_html)
-        return cleantext
+    def cleanhtml(html):
+        doc = lxml.html.fromstring(html)
+        cleaner = lxml.html.clean.Cleaner(style=True)
+        doc = cleaner.clean_html(doc)
+        text = doc.text_content()
+        return text
 
 
     parser= feedparser.parse(rss_url)

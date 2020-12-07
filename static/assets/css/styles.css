@@ -26,6 +26,30 @@ body {
     background-color: var(--black);
     color: #fff;
 }
+/*Scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--black);
+
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    background-image: url('https://raw.githubusercontent.com/gkdhindsa/dsc-afterhours/master/static/assets/img/Groupmic.svg');
+    background-size:13px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(87,49,239, 0.5);
+  }
 
 h1 {
     font-family: 'Gilroy-Bold', sans-serif;
@@ -37,9 +61,11 @@ h2 {
     font-family: 'Gilroy-Regular', sans-serif;
     font-size: 1.5rem;
 }
-h3{
+
+h3 {
     font-size: 1.5rem;
 }
+
 p {
     line-height: 1.5rem;
     font-size: 1rem;
@@ -98,7 +124,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
+}
+#animated-icon{
+    width: 500px;
+    height: 500px;
+    padding-right: 2rem;
 }
 
 .mic {
@@ -131,6 +162,11 @@ p {
 
 .home-icon {
     margin-right: 2rem;
+    color: #fff;
+}
+
+.home-icons {
+    display: flex;
 }
 
 /*About section*/
@@ -223,29 +259,37 @@ p {
     box-shadow: 0px -65px 266px rgba(0, 0, 0, 0.16), 0px -27.1554px 111.128px rgba(0, 0, 0, 0.115017), 0px -14.5186px 59.4146px rgba(0, 0, 0, 0.0953772), 0px -8.13901px 33.3073px rgba(0, 0, 0, 0.08), 0px -4.32257px 17.6893px rgba(0, 0, 0, 0.0646228), 0px -1.79872px 7.3609px rgba(0, 0, 0, 0.0449833);
     display: flex;
 }
-.footer-one{
+
+.footer-one {
     width: 30%;
     position: relative;
 }
-.full-logo{
+
+.full-logo {
     width: 320px;
     max-width: 100%;
 }
-.footer-two{
+
+.footer-two {
     display: flex;
     justify-content: space-evenly;
     width: 50%;
     text-align: center;
 }
-.footer-one, .footer-two{
+
+.footer-one,
+.footer-two {
     padding: 5%;
 }
-.socials-text>a, .f-about>a, .links>a{
+
+.socials-text>a,
+.f-about>a,
+.links>a {
     text-decoration: none;
     color: white;
 }
 
-.socials-text>a{
+.socials-text>a {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -253,22 +297,105 @@ p {
     margin-inline-end: 0px;
     text-align: left;
 }
-.socials-text>a>i{
+
+.socials-text>a>i {
     margin-right: 5px;
 }
-.socials-text>a>p{
+
+.socials-text>a>p {
     display: inline;
     line-height: 1.5rem;
 }
-.full-logo-center{
+
+.full-logo-center {
     display: none;
     width: 200px;
     margin: auto;
 }
-.mwl{
+
+.mwl {
     position: absolute;
     bottom: 10%;
-  
+
+}
+
+/*Animation loader*/
+
+#loader{
+    position: fixed;
+    z-index: 100;
+}
+.loader-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-container {
+
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 60px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.micro {
+    position: absolute;
+    height: 50px;
+    width: auto;
+}
+
+.circle:nth-child(1) {
+    animation: 2.5s linear infinite circleAnimation;
+}
+
+.circle:nth-child(2) {
+    animation: 2.5s linear -0.5s infinite circleAnimation;
+}
+
+.circle:nth-child(3) {
+    animation: 2.5s linear -1s infinite circleAnimation;
+}
+
+.circle:nth-child(3) {
+    animation: 2.5s linear -1.5s infinite circleAnimation;
+}
+
+.circle:nth-child(4) {
+    animation: 2.5s linear -2s infinite circleAnimation;
+}
+
+.circle:nth-child(5) {
+    animation: 2.5s linear -2.5s infinite circleAnimation;
+}
+
+@keyframes circleAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+
+        transform: scale(5);
+        opacity: 0.1;
+    }
 }
 
 
@@ -289,13 +416,22 @@ p {
     .home-icon {
         height: 30px;
     }
-
     p {
         font-size: 0.8rem;
     }
 }
 
 @media (max-width: 768px) {
+    .micro{
+        height: 30px;
+    }
+    h1{
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 2.2rem;
+    }
+    .home-icons{
+        justify-content: center;
+    }
     .container {
         display: block;
         text-align: center;
@@ -317,6 +453,7 @@ p {
 
     #home-text {
         margin-top: 2rem;
+        padding: 0% 5%;
     }
 
     .navbar {
@@ -325,7 +462,7 @@ p {
 
     .nav-logo,
     .mobile-bars {
-        padding-top: rem;
+        padding: 0;
         height: 25px;
     }
 
@@ -361,7 +498,8 @@ p {
     .about {
         display: block;
     }
-    .about-text{
+
+    .about-text {
         padding-bottom: 5%;
     }
 
@@ -384,45 +522,84 @@ p {
     .episodes {
         border-bottom: 5px solid var(--purple);
     }
-    .full-logo{
+
+    .full-logo {
         display: none;
     }
-    .full-logo-center{
+
+    .full-logo-center {
         display: block;
     }
-    #footer{
+
+    #footer {
         display: block;
     }
-    .mwl{
+
+    .mwl {
         position: relative;
         margin-top: 1.5rem;
     }
-    .footer-one{
+
+    .footer-one {
         width: 90%;
         text-align: center;
         padding-bottom: 0;
     }
-   
-    .footer-two{
-       flex-direction: column;
+
+    .footer-two {
+        flex-direction: column;
         width: 90%;
-     
+
     }
-    p{
+
+    p {
         line-height: 1.2rem;
     }
 
-    .f-about{
+    .f-about {
         display: none;
     }
-    .socials>h2{
+
+    .socials>h2 {
         margin-top: 0;
     }
-    .socials-text{
+
+    .socials-text {
         display: inline-block;
     }
-    .nav-super{
+
+    .nav-super {
         position: fixed !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .home-icon {
+        margin-right: 0.5rem;
+    }
+
+    .circle-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 250px) {
+
+    .circle-container {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .circle {
+        height: 25px;
+        width: 25px;
     }
 }
 
@@ -433,3 +610,92 @@ p {
 .hide {
     display: none;
 }
+
+
+/*equaliser*/
+.block{
+    position: relative;
+}
+.album {
+
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 160px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--black);
+  
+  }
+  
+  .artwork {
+    margin: auto;
+  }
+  
+  .bars {
+      margin: 0;
+      padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 160px;
+    list-style: none;
+  }
+  .bars li {
+    width: 2.5vw;
+    height: 100px;
+    margin: 0 .35vw;
+   
+    -webkit-animation: equaliser 1s linear infinite;
+            animation: equaliser 1s linear infinite;
+  }
+  .bars li:nth-child(1) {
+    background: var(--purple);
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    opacity: 30%;
+  }
+  .bars li:nth-child(2) {
+    background:  var(--purple);
+    opacity: 40%;
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+  }
+  .bars li:nth-child(3) {
+    background:  var(--purple);
+    opacity: 50%;
+    -webkit-animation-delay: 0.50s;
+            animation-delay: 0.50s;
+  }
+  .bars li:nth-child(4) {
+    opacity: 40%;
+    background:  var(--purple);
+    -webkit-animation-delay: 0.75s;
+            animation-delay: 0.75s;
+  }
+  .bars li:nth-child(5) {
+    opacity: 30%;
+    background:  var(--purple);
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  
+  @-webkit-keyframes equaliser {
+    50% {
+      height: 2.5vw;
+    }
+  }
+  
+  @keyframes equaliser {
+    50% {
+      height: 2.5vw;
+    }
+  }
+ 

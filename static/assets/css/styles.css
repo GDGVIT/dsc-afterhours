@@ -127,8 +127,8 @@ p {
 
 }
 #animated-icon{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     padding-right: 2rem;
 }
 
@@ -422,6 +422,12 @@ p {
 }
 
 @media (max-width: 768px) {
+    #animated-icon{
+        width: 300px;
+        height: 300px;
+      padding: 0;
+      margin: auto;
+    }
     .micro{
         height: 30px;
     }
@@ -575,6 +581,11 @@ p {
 }
 
 @media (max-width: 400px) {
+    #animated-icon{
+        width: 250px;
+        height: 250px;
+
+    }
     .home-icon {
         margin-right: 0.5rem;
     }
@@ -591,6 +602,11 @@ p {
 }
 
 @media (max-width: 250px) {
+    #animated-icon{
+        width: 200px;
+        height: 200px;
+
+    }
 
     .circle-container {
         width: 80vw;
@@ -649,7 +665,7 @@ p {
     list-style: none;
   }
   .bars li {
-    width: 2.5vw;
+    width: 20px;
     height: 100px;
     margin: 0 .35vw;
    

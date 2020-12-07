@@ -26,18 +26,30 @@
 ## Instructions to run
 
 * Pre-requisites:
-	-  < insert pre-requisite >
-	-  < insert pre-requisite >
+		-  python 3.7 or 3.8
+		-  dependencies from requirements.txt
+
+<br>
+First, clone this repository onto your system. <br>
+Then, create a virtual environment and install the packages from requirements.txt: <br>
+Navigate to this repository, create a virtual environment and activate it: <br>
 
 * < directions to install > 
-```bash
-< insert code >
-```
 
+```bash
+cd path/to/folder
+python -m venv env
+source env/bin/activate
+```
+Install the python dependencies from requirements.txt:
+
+```bash
+pip install -r requirements.txt
+```
 * < directions to execute >
 
 ```bash
-< insert code >
+python app.py
 ```
 
 ## Contributors

@@ -357,7 +357,7 @@ p {
 
 .micro {
     position: absolute;
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
@@ -577,6 +577,10 @@ p {
     .nav-super {
         position: fixed !important;
     }
+    .circle-container {
+        width: 200px;
+        height: 300px;
+    }
 
 }
 
@@ -591,13 +595,16 @@ p {
     }
 
     .circle-container {
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
     }
 
     .circle {
         height: 25px;
         width: 25px;
+    }
+    .micro {
+        height: 20px;
     }
 }
 

@@ -357,7 +357,7 @@ p {
 
 .micro {
     position: absolute;
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
@@ -598,6 +598,9 @@ p {
     .circle {
         height: 25px;
         width: 25px;
+    }
+    .micro {
+        height: 20px;
     }
 }
 
